@@ -22,12 +22,6 @@ public class DiceSpawner : MonoBehaviour
         eventTrigger = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void spawnDice(InputAction.CallbackContext context) {
         if(diceQuantity.Count > 0 && !eventTrigger) {
             foreach (GameObject die in dice) {
