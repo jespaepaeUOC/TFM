@@ -6,12 +6,14 @@ public class RoomManager : MonoBehaviour
 {
     public GameObject vCam;
     public GameObject diceSpawner;
+    public GameObject spikeSpawner;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
             vCam.SetActive(true);
             diceSpawner.SetActive(true);
+            spikeSpawner.SetActive(true);
         }
     }
 
@@ -20,6 +22,7 @@ public class RoomManager : MonoBehaviour
         {
             vCam.SetActive(false);
             diceSpawner.SetActive(false);  
+            spikeSpawner.SetActive(false);
         }
     }
 }
