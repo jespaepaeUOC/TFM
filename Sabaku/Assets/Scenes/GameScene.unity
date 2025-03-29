@@ -154,6 +154,158 @@ Transform:
   m_Children: []
   m_Father: {fileID: 569169682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &372919203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 372919204}
+  - component: {fileID: 372919206}
+  - component: {fileID: 372919205}
+  m_Layer: 0
+  m_Name: DiceSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &372919204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372919203}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -11, z: -14.519151}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1786639412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372919205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372919203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 476876fe1e5448a46979ef71a8a65c02, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d7d2779-39f6-4e79-8ea3-5d0b1eb6e515
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 502cf617-61d0-449d-9618-70bc5c0a40bb
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2b24e364-2f05-4c58-a568-39d130bf8603
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 940e1036-ef0f-4c81-8c88-be80ec4a2435
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e39ef482-a3c0-4211-8f2f-961bd3d03f53
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f8e026d1-e664-4f41-80b6-c0804d53d831
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fff02547-7bc9-414a-acdf-15843166e724
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 46b13c89-189f-47f9-a1f9-9ac78f950eec
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 58386de6-f5cd-4c53-998e-cef262e86470
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c08daf42-1cd2-42f1-a777-3c6c5e3745cd
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9db909eb-107f-4f7f-b554-19fb175739f6
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 488e8f0d-301b-4231-8c50-80572438f22a
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d0b514dc-0c54-45a3-a154-186d8143bc94
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a95c4401-6e44-4147-8427-a78ac50429f6
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 372919206}
+        m_TargetAssemblyTypeName: DiceSpawner, Assembly-CSharp
+        m_MethodName: spawnDice
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c88a629a-60ae-4a24-b08c-6a80fede3693
+    m_ActionName: Debug/SpawnDice[/Keyboard/m]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Debug
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &372919206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372919203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ba513360bf404ba2c260195006642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice:
+  - {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
+  diceQuantity: 05000000
+  secondsToSpawn: 1
+  offset: 5
 --- !u!1 &375122295
 GameObject:
   m_ObjectHideFlags: 0
@@ -24642,6 +24794,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1411291810}
+  - {fileID: 1562501394}
   m_Father: {fileID: 1136444467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &514339539
@@ -24706,6 +24859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vCam: {fileID: 1411291809}
+  diceSpawner: {fileID: 1562501392}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -25007,6 +25161,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1331802228}
+  - {fileID: 1855896321}
   m_Father: {fileID: 1136444467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &858142861
@@ -25071,6 +25226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vCam: {fileID: 1331802226}
+  diceSpawner: {fileID: 1855896320}
 --- !u!1 &873761769
 GameObject:
   m_ObjectHideFlags: 3
@@ -25293,31 +25449,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
-  - first: {x: -18, y: -39, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 27
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
   - first: {x: -14, y: -39, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 2
       m_TileSpriteIndex: 27
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: -18, y: -38, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 28
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -25649,7 +25785,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 39
+  - m_RefCount: 37
     m_Data: {fileID: 11400000, guid: 7767eb10a2c821d4f8457047e48e2b9f, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -25706,12 +25842,12 @@ Tilemap:
     m_Data: {fileID: -1098661654, guid: 7f7e2d135f9d3584291cfb3996fb3a0f, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -517089391, guid: 7f7e2d135f9d3584291cfb3996fb3a0f, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 511383284, guid: 7f7e2d135f9d3584291cfb3996fb3a0f, type: 3}
-  - m_RefCount: 8
+  - m_RefCount: 7
     m_Data: {fileID: -720191101, guid: 7f7e2d135f9d3584291cfb3996fb3a0f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 39
+  - m_RefCount: 37
     m_Data:
       e00: 1
       e01: 0
@@ -25732,7 +25868,7 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 39
+  - m_RefCount: 37
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -26423,66 +26559,6 @@ CompositeCollider2D:
         Y: -384531264
       - X: -137734368
         Y: -384531264
-    - - X: -177109376
-        Y: -383984384
-      - X: -176484368
-        Y: -384453120
-      - X: -176328128
-        Y: -384531264
-      - X: -175312496
-        Y: -384531264
-      - X: -174843744
-        Y: -383984384
-      - X: -173906256
-        Y: -384531264
-      - X: -172109376
-        Y: -384531264
-      - X: -171718752
-        Y: -384453120
-      - X: -171562496
-        Y: -384531264
-      - X: -170156256
-        Y: -384531264
-      - X: -170000000
-        Y: -384062496
-      - X: -170000000
-        Y: -377187488
-      - X: -170390624
-        Y: -376171872
-      - X: -171015632
-        Y: -375468736
-      - X: -172109376
-        Y: -375468736
-      - X: -172890624
-        Y: -376171872
-      - X: -173515632
-        Y: -375468736
-      - X: -175390624
-        Y: -375468736
-      - X: -175781248
-        Y: -375546880
-      - X: -175937504
-        Y: -375468736
-      - X: -177421872
-        Y: -375468736
-      - X: -177656256
-        Y: -375937504
-      - X: -178515632
-        Y: -375546880
-      - X: -178750000
-        Y: -375468736
-      - X: -179609376
-        Y: -375468736
-      - X: -180000000
-        Y: -376015616
-      - X: -180000000
-        Y: -382812512
-      - X: -179609376
-        Y: -383828128
-      - X: -178906256
-        Y: -384531264
-      - X: -177734368
-        Y: -384531264
     - - X: -197109376
         Y: -393984384
       - X: -196484368
@@ -26918,36 +26994,6 @@ CompositeCollider2D:
       - {x: -13.999998, y: -38.281254}
       - {x: -13.960935, y: -38.382816}
       - {x: -13.8906145, y: -38.453125}
-    - - {x: -17.773447, y: -38.453125}
-      - {x: -17.71092, y: -38.398453}
-      - {x: -17.648436, y: -38.445312}
-      - {x: -17.632807, y: -38.453125}
-      - {x: -17.531242, y: -38.453117}
-      - {x: -17.484354, y: -38.398453}
-      - {x: -17.39062, y: -38.453125}
-      - {x: -17.210936, y: -38.453125}
-      - {x: -17.171867, y: -38.445316}
-      - {x: -17.156244, y: -38.453125}
-      - {x: -17.01562, y: -38.453106}
-      - {x: -17, y: -38.406246}
-      - {x: -17.000002, y: -37.718746}
-      - {x: -17.039066, y: -37.617184}
-      - {x: -17.101574, y: -37.546875}
-      - {x: -17.210945, y: -37.54688}
-      - {x: -17.289082, y: -37.617165}
-      - {x: -17.351574, y: -37.546875}
-      - {x: -17.539064, y: -37.546875}
-      - {x: -17.578133, y: -37.554684}
-      - {x: -17.593758, y: -37.546875}
-      - {x: -17.742195, y: -37.54689}
-      - {x: -17.765652, y: -37.59374}
-      - {x: -17.851562, y: -37.554688}
-      - {x: -17.875006, y: -37.546875}
-      - {x: -17.960945, y: -37.546883}
-      - {x: -18, y: -37.60157}
-      - {x: -17.999998, y: -38.281254}
-      - {x: -17.960934, y: -38.382816}
-      - {x: -17.890615, y: -38.453125}
     - - {x: -19.773447, y: -39.453125}
       - {x: -19.71092, y: -39.398453}
       - {x: -19.648436, y: -39.445312}
@@ -27095,7 +27141,7 @@ GameObject:
   - component: {fileID: 946747910}
   m_Layer: 0
   m_Name: DiceFloor
-  m_TagString: Untagged
+  m_TagString: DiceFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27816,7 +27862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1562501393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27842,12 +27888,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562501392}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.73, y: -37.61, z: -14.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -11.095221, z: -14.519151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 514339538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1562501395
 MonoBehaviour:
@@ -28105,6 +28151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2080446262}
+  - {fileID: 372919204}
   m_Father: {fileID: 1136444467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1786639413
@@ -28169,6 +28216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vCam: {fileID: 2080446261}
+  diceSpawner: {fileID: 372919203}
 --- !u!1 &1807477045
 GameObject:
   m_ObjectHideFlags: 0
@@ -28200,6 +28248,158 @@ Transform:
   m_Children: []
   m_Father: {fileID: 569169682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1855896320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855896321}
+  - component: {fileID: 1855896323}
+  - component: {fileID: 1855896322}
+  m_Layer: 0
+  m_Name: DiceSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1855896321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855896320}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.11, y: -11, z: -14.519151}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858142860}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855896322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855896320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 476876fe1e5448a46979ef71a8a65c02, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d7d2779-39f6-4e79-8ea3-5d0b1eb6e515
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 502cf617-61d0-449d-9618-70bc5c0a40bb
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2b24e364-2f05-4c58-a568-39d130bf8603
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 940e1036-ef0f-4c81-8c88-be80ec4a2435
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e39ef482-a3c0-4211-8f2f-961bd3d03f53
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f8e026d1-e664-4f41-80b6-c0804d53d831
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fff02547-7bc9-414a-acdf-15843166e724
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 46b13c89-189f-47f9-a1f9-9ac78f950eec
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 58386de6-f5cd-4c53-998e-cef262e86470
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c08daf42-1cd2-42f1-a777-3c6c5e3745cd
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9db909eb-107f-4f7f-b554-19fb175739f6
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 488e8f0d-301b-4231-8c50-80572438f22a
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d0b514dc-0c54-45a3-a154-186d8143bc94
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a95c4401-6e44-4147-8427-a78ac50429f6
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1855896323}
+        m_TargetAssemblyTypeName: DiceSpawner, Assembly-CSharp
+        m_MethodName: spawnDice
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c88a629a-60ae-4a24-b08c-6a80fede3693
+    m_ActionName: Debug/SpawnDice[/Keyboard/m]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Debug
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1855896323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855896320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ba513360bf404ba2c260195006642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice:
+  - {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
+  diceQuantity: 05000000
+  secondsToSpawn: 1
+  offset: 5
 --- !u!1 &1911840144
 GameObject:
   m_ObjectHideFlags: 0
@@ -28571,4 +28771,3 @@ SceneRoots:
   - {fileID: 2129909043}
   - {fileID: 946747909}
   - {fileID: 1706424113}
-  - {fileID: 1562501394}
