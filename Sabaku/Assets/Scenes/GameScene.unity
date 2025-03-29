@@ -25162,6 +25162,7 @@ Transform:
   m_Children:
   - {fileID: 1331802228}
   - {fileID: 1855896321}
+  - {fileID: 2022917783}
   m_Father: {fileID: 1136444467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &858142861
@@ -28397,7 +28398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice:
   - {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
-  diceQuantity: 05000000
+  diceQuantity: 02000000
   secondsToSpawn: 1
   offset: 5
 --- !u!1 &1911840144
@@ -28501,6 +28502,65 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2022917782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022917783}
+  - component: {fileID: 2022917784}
+  m_Layer: 0
+  m_Name: SpikeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022917783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022917782}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.6727486, y: -12.484423, z: 3.6760638}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858142860}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022917784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022917782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b297840567a3b4d9f4c91ebc08df48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spike: {fileID: 11400000, guid: 646621ae95caacf449a66411ecc4fb46, type: 2}
+  positions:
+  - {x: -21, y: -39, z: 0}
+  - {x: -22, y: -39, z: 0}
+  - {x: -23, y: -39, z: 0}
+  - {x: -24, y: -39, z: 0}
+  - {x: -17, y: -36, z: 0}
+  - {x: -16, y: -36, z: 0}
+  - {x: -15, y: -36, z: 0}
+  - {x: -18, y: -38, z: 0}
+  - {x: -19, y: -38, z: 0}
+  - {x: -13, y: -38, z: 0}
+  - {x: -11, y: -40, z: 0}
+  - {x: -10, y: -40, z: 0}
+  tilemap: {fileID: 885177819}
 --- !u!1 &2080446261
 GameObject:
   m_ObjectHideFlags: 0

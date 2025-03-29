@@ -28,6 +28,8 @@ public class DiceManager : MonoBehaviour
         {
             Debug.Log("You got a: " + diceFaceNum);
             hasntRun = false;
+            SpikeSpawner spikeSpawner = GameObject.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
+            spikeSpawner.SpawnSpikes(diceFaceNum);
             Destroy(this.gameObject);
         }
         
