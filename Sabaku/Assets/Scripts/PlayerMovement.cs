@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
 
     private Animator animator;
 
@@ -25,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(isDashing)
+        {
+            return;
+        }
+
         if (IsTouchingSpikes())
         {
             Destroy(this.gameObject);
@@ -42,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsGrounded())
         {
+            ResetDash();
             ResetJumps();
         }
 
@@ -50,6 +61,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(isDashing)
+        {
+            return;
+        }
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
@@ -98,9 +113,34 @@ public class PlayerMovement : MonoBehaviour
         jumpsLeft = 1;
     }
 
+    private void ResetDash()
+    {
+        canDash = true;
+    }
+
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if(canDash)
+        {
+            StartCoroutine(DashCoroutine());
+        }
+    }
+
+    private IEnumerator DashCoroutine()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        yield return new WaitForSeconds(dashingTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
     }
 
     private void UpdateAnimation()

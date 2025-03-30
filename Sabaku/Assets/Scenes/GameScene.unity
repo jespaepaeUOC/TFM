@@ -498,7 +498,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 28
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2808,7 +2808,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 28
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -24283,20 +24283,20 @@ Tilemap:
     m_Data: {fileID: -1939184214, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 94645758, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -481900764, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2071969808, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -481900764, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 37
     m_Data: {fileID: -96500938, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: -1677960725, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 34
     m_Data: {fileID: -1711199482, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2071969808, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1621149047, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
   - m_RefCount: 2
@@ -28534,6 +28534,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c88a629a-60ae-4a24-b08c-6a80fede3693
     m_ActionName: Debug/SpawnDice[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 409336509}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a63db446-d373-4299-9933-4faaca6d4418
+    m_ActionName: Player/Dash[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -34643,8 +34659,8 @@ Transform:
   m_GameObject: {fileID: 946747905}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0561, y: -47.4518, z: -3.19}
-  m_LocalScale: {x: 83.58322, y: 57.625614, z: 0.2256}
+  m_LocalPosition: {x: 15.5108, y: -16.8046, z: -3.19}
+  m_LocalScale: {x: 314.212, y: 259.86377, z: 0.2256}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -36526,6 +36542,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c88a629a-60ae-4a24-b08c-6a80fede3693
     m_ActionName: Debug/SpawnDice[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a63db446-d373-4299-9933-4faaca6d4418
+    m_ActionName: Player/Dash[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Debug
@@ -37102,6 +37122,10 @@ PrefabInstance:
     - target: {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
       propertyPath: m_Name
       value: Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
