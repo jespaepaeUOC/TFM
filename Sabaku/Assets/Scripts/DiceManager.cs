@@ -26,7 +26,7 @@ public class DiceManager : MonoBehaviour
         diceFaceNum = num;
         if(hasntRun)
         {
-            Debug.Log("You got a: " + diceFaceNum);
+            // Debug.Log("You got a: " + diceFaceNum);
             hasntRun = false;
             SpikeSpawner spikeSpawner = GameObject.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
             spikeSpawner.SpawnSpikes(diceFaceNum);
