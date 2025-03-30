@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class RoomManager : MonoBehaviour
 {
@@ -21,8 +22,14 @@ public class RoomManager : MonoBehaviour
         if(other.CompareTag("Player") && !other.isTrigger)
         {
             vCam.SetActive(false);
-            diceSpawner.SetActive(false);  
+            diceSpawner.SetActive(false);
             spikeSpawner.SetActive(false);
+            this.transform.parent.GetComponent<RoomsManager>().spawnDice();
         }
+    }
+
+    public bool isRoomActive()
+    {
+        return vCam.activeSelf && diceSpawner.activeSelf && spikeSpawner.activeSelf;
     }
 }

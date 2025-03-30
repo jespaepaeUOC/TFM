@@ -37,6 +37,7 @@ public class ButtonManager : MonoBehaviour
 
     public void LoadMainMenuScene()
     {
+        UnpauseGame();
         SceneManager.LoadScene("MainMenuScene");
     }
 }

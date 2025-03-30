@@ -604,6 +604,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c88a629a-60ae-4a24-b08c-6a80fede3693
     m_ActionName: Debug/SpawnDice[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a63db446-d373-4299-9933-4faaca6d4418
+    m_ActionName: Player/Dash[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Debug
@@ -33017,7 +33021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e649648713b4e594daa70e1c9065758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 195925215}
 --- !u!114 &826460817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33273,6 +33277,37 @@ MonoBehaviour:
   vCam: {fileID: 1331802226}
   diceSpawner: {fileID: 1855896320}
   spikeSpawner: {fileID: 2022917782}
+--- !u!1 &865830334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865830335}
+  m_Layer: 0
+  m_Name: AllDice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865830335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865830334}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1171.339, y: 800.75433, z: -4.0883393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873761769
 GameObject:
   m_ObjectHideFlags: 3
@@ -39066,6 +39101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1136444467}
+  - component: {fileID: 1136444468}
   m_Layer: 0
   m_Name: Rooms
   m_TagString: Untagged
@@ -39094,6 +39130,18 @@ Transform:
   - {fileID: 795786281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1136444468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136444466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e97c976f811c8469134ff547697013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1169855104
 GameObject:
   m_ObjectHideFlags: 0
@@ -41517,7 +41565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice:
   - {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
-  diceQuantity: 02000000
+  diceQuantity: 01000000
   secondsToSpawn: 1
   offset: 5
 --- !u!1 &1911840144
@@ -42306,3 +42354,4 @@ SceneRoots:
   - {fileID: 2129909043}
   - {fileID: 946747909}
   - {fileID: 1706424113}
+  - {fileID: 865830335}
