@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool canDash = true;
     private bool isDashing = false;
-    private float dashingPower = 24f;
+    private float dashingPower = 16f;
     private float dashingTime = 0.2f;
 
     private Animator animator;
