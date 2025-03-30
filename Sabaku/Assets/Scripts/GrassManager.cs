@@ -7,8 +7,8 @@ public class GrassManager : MonoBehaviour
 {
     public Transform player;                // Asigna al jugador en el inspector
     public float activationDistance = 1.5f; // Distancia de activación
-    public float windSpeed = 10f;           // Velocidad de movimiento
-    public float windStrength = 0.1f;       // Intensidad del movimiento
+    public float windSpeed = 1f;           // Velocidad de movimiento
+    public float windStrength = 0.2f;       // Intensidad del movimiento
 
     private Vector3 originalPosition;
     private float wiggleTime;
@@ -33,7 +33,6 @@ public class GrassManager : MonoBehaviour
         }
         else
         {
-            // Suavemente volver a la posición original
             transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, Time.deltaTime * 5f);
         }
     }
