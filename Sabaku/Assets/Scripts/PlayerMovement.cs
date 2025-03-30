@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask spikeLayer;
 
     private float horizontal;
+    private int jumpsLeft = 1;
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() {
         animator = GetComponent<Animator>();
+        ResetJumps();
     }
 
     void Update()
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsTouchingSpikes())
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene("GameScene");
         }
 
         if (!isFacingRight && horizontal > 0f)
@@ -34,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
         else if (isFacingRight && horizontal < 0f)
         {
             Flip();
+        }
+
+        if (IsGrounded())
+        {
+            ResetJumps();
         }
 
         UpdateAnimation();
@@ -46,9 +55,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (context.performed && jumpsLeft > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            jumpsLeft--;
         }
 
         if (context.canceled && rb.velocity.y > 0f)
@@ -81,6 +91,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
+    }
+
+    private void ResetJumps()
+    {
+        jumpsLeft = 1;
     }
 
     public void Move(InputAction.CallbackContext context)
