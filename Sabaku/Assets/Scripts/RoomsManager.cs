@@ -18,15 +18,19 @@ public class RoomsManager : MonoBehaviour
 
     public void spawnDice()
     {
+        Debug.Log("RoomsManager - spawnDice");
         GameObject activeRoom = getActiveRoom();
+        
         if (activeRoom != null)
         {
+            Debug.Log("RoomsManager - spawnDice - beforeSpawnDice");
             activeRoom.transform.Find("DiceSpawner").GetComponent<DiceSpawner>().spawnDice();
         }
     }
 
     private GameObject getActiveRoom()
     {
+        Debug.Log("RoomsManager - getActiveRoom");
         GameObject activeRoom = null;
         foreach(Transform room in transform)
         {
@@ -36,6 +40,7 @@ public class RoomsManager : MonoBehaviour
                 break;
             }
         }
+        if (activeRoom != null) Debug.Log("RoomsManager - getActiveRoom - activeRoom: " + activeRoom.name);
         return activeRoom;
     }
 

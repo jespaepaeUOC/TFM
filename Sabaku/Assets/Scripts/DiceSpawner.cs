@@ -19,12 +19,14 @@ public class DiceSpawner : MonoBehaviour
     private float originalGravity = 4;
     private Vector3 originalVelocity;
     private bool hasPaused;
+    private int timesDiceCanSapwn;
 
     // Start is called before the first frame update
     void Start()
     {
         eventTrigger = false;
         hasPaused = false;
+        timesDiceCanSapwn = 1;
     }
 
     void Update()
@@ -60,7 +62,7 @@ public class DiceSpawner : MonoBehaviour
     }
 
     public void spawnDice() {
-        if(diceQuantity.Count > 0 && !eventTrigger) {
+        if(diceQuantity.Count > 0 && !eventTrigger && timesDiceCanSapwn > 0) {
             foreach (GameObject die in dice) {
                 int index = dice.IndexOf(die);
                 if (index < diceQuantity.Count)
@@ -76,6 +78,7 @@ public class DiceSpawner : MonoBehaviour
             }
             eventTrigger = true;
             StartCoroutine(CanSpawn());
+            timesDiceCanSapwn--;
         }
     }
 
@@ -107,7 +110,7 @@ public class DiceSpawner : MonoBehaviour
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
             originalVelocity = rb.velocity;
             rb.velocity = Vector3.zero;
-            originalGravity = rb.gravityScale;
+            // originalGravity = rb.gravityScale;
             rb.gravityScale = 0f;
             hasPaused = true;
         }

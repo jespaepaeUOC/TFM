@@ -21,6 +21,7 @@ public class RoomManager : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
+            Debug.Log("RoomExit");
             vCam.SetActive(false);
             diceSpawner.SetActive(false);
             spikeSpawner.SetActive(false);

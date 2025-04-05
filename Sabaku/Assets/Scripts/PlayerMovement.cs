@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsTouchingSpikes())
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             SceneManager.LoadScene("GameScene");
         }
 
