@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private float dashingPower = 16f;
     private float dashingTime = 0.2f;
+    private bool hasJustDied = false;
 
     private Animator animator;
 
@@ -184,10 +185,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void RespawnPlayer()
     {
-        GameObject activeRoom = GameObject.Find("Rooms").GetComponent<RoomsManager>().getActiveRoom();
+        RoomsManager roomsManager = GameObject.Find("Rooms").GetComponent<RoomsManager>();
+        GameObject activeRoom = roomsManager.getActiveRoom();
         if (activeRoom != null)
         {
+            SetHasJustDied(true);
+            roomsManager.spawnDice();
             this.transform.position = activeRoom.transform.Find("RespawnPoint").position;
+            activeRoom.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>().DeleteAllSpikes();
         }
+    }
+
+    public bool GetHasJustDied()
+    {
+        return hasJustDied;
+    }
+
+    public void SetHasJustDied(bool NewhasJustDied)
+    {
+        hasJustDied = NewhasJustDied;
     }
 }

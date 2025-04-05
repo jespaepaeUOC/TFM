@@ -19,14 +19,12 @@ public class DiceSpawner : MonoBehaviour
     private float originalGravity = 4;
     private Vector3 originalVelocity;
     private bool hasPaused;
-    private int timesDiceCanSapwn;
 
     // Start is called before the first frame update
     void Start()
     {
         eventTrigger = false;
         hasPaused = false;
-        timesDiceCanSapwn = 1;
     }
 
     void Update()
@@ -57,12 +55,12 @@ public class DiceSpawner : MonoBehaviour
                 }
             }
             eventTrigger = true;
-            StartCoroutine(CanSpawn());
+            StartCoroutine(CanSpawnAfterSeconds());
         }
     }
 
     public void spawnDice() {
-        if(diceQuantity.Count > 0 && !eventTrigger && timesDiceCanSapwn > 0) {
+        if(diceQuantity.Count > 0 && !eventTrigger && CanSpawn()) {
             foreach (GameObject die in dice) {
                 int index = dice.IndexOf(die);
                 if (index < diceQuantity.Count)
@@ -77,12 +75,11 @@ public class DiceSpawner : MonoBehaviour
                 }
             }
             eventTrigger = true;
-            StartCoroutine(CanSpawn());
-            timesDiceCanSapwn--;
+            StartCoroutine(CanSpawnAfterSeconds());
         }
     }
 
-    private IEnumerator CanSpawn() {
+    private IEnumerator CanSpawnAfterSeconds() {
         yield return new WaitForSeconds(secondsToSpawn);
         eventTrigger = false;
     }
@@ -129,5 +126,18 @@ public class DiceSpawner : MonoBehaviour
             rb.velocity = originalVelocity;
             hasPaused = false;
         }
+    }
+
+    private bool CanSpawn()
+    {
+        bool canSpawn = true;
+        RoomManager roomManager = transform.parent.GetComponent<RoomManager>();
+        PlayerMovement player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        if (roomManager != null && player != null)
+        {
+            canSpawn = roomManager.GetIsFirstTimeEnteringRoom() || player.GetHasJustDied();
+            player.SetHasJustDied(false);
+        }
+        return canSpawn;
     }
 }
