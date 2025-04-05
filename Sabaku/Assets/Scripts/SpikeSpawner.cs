@@ -43,4 +43,18 @@ public class SpikeSpawner : MonoBehaviour
             }
         }
     }
+
+    public void DeleteSpikes(int number)
+    {
+        for(int i = 0; i < number; i++)
+        {
+            if (spawnedSpikesPositions.Count > 0) {
+                int randomSpike = Random.Range(0, spawnedSpikesPositions.Count);
+                Vector3Int position = spawnedSpikesPositions[randomSpike];
+                tilemap.SetTile(position, null);
+                spawnedSpikesPositions.Remove(position);
+                posibleSpikesPositions.Add(position);
+            }
+        }
+    }
 }

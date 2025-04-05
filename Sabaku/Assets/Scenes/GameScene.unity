@@ -44250,7 +44250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice:
   - {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
-  diceQuantity: 01000000
+  - {fileID: 7090652710153394639, guid: 0d92e486fb913cd4d9512c4eec9fa884, type: 3}
+  diceQuantity: 0200000001000000
   secondsToSpawn: 1
   offset: 5
 --- !u!4 &1562501394
@@ -45560,7 +45561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice:
   - {fileID: 7090652710153394639, guid: 409a0525ccc652048a46c6a7a9d2bfcb, type: 3}
-  diceQuantity: 01000000
+  - {fileID: 7090652710153394639, guid: 0d92e486fb913cd4d9512c4eec9fa884, type: 3}
+  diceQuantity: 0200000001000000
   secondsToSpawn: 1
   offset: 5
 --- !u!1 &1911840144

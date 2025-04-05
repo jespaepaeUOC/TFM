@@ -6,6 +6,8 @@ using UnityEngine;
 public class DiceManager : MonoBehaviour
 {
 
+    public enum typeOfDice{SpawnSpikes, DeleteSpikes, AddSecond, DeleteSeconds, SpawnEnemies, DeleteEnemies};
+    public typeOfDice type;
     private int diceFaceNum; 
     private bool hasntRun;
     // Start is called before the first frame update
@@ -28,8 +30,7 @@ public class DiceManager : MonoBehaviour
         {
             // Debug.Log("You got a: " + diceFaceNum);
             hasntRun = false;
-            SpikeSpawner spikeSpawner = GameObject.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
-            spikeSpawner.SpawnSpikes(diceFaceNum);
+            makeMagic();
             Destroy(this.gameObject);
         }
         
@@ -38,5 +39,21 @@ public class DiceManager : MonoBehaviour
     public int getDiceFaceNum()
     {
         return diceFaceNum;
+    }
+
+    private void makeMagic()
+    {
+        SpikeSpawner spikeSpawner = GameObject.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
+        switch(type)
+        {
+            case typeOfDice.SpawnSpikes:
+                spikeSpawner.SpawnSpikes(diceFaceNum);
+                break;
+            
+            case typeOfDice.DeleteSpikes:
+                spikeSpawner.DeleteSpikes(diceFaceNum);
+                break;
+            
+        }
     }
 }
