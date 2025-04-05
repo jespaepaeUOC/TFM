@@ -37,8 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsTouchingSpikes())
         {
+            RespawnPlayer();
             //Destroy(this.gameObject);
-            SceneManager.LoadScene("GameScene");
+            //SceneManager.LoadScene("GameScene");
         }
 
         if (!isFacingRight && horizontal > 0f)
@@ -178,6 +179,15 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isJumping", false);
                 animator.SetBool("isFalling", true);
             }
+        }
+    }
+
+    private void RespawnPlayer()
+    {
+        GameObject activeRoom = GameObject.Find("Rooms").GetComponent<RoomsManager>().getActiveRoom();
+        if (activeRoom != null)
+        {
+            this.transform.position = activeRoom.transform.Find("RespawnPoint").position;
         }
     }
 }

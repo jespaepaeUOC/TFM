@@ -7,6 +7,7 @@ public class SpikeSpawner : MonoBehaviour
 {
     public Tile spike;
     public List<Vector3Int> positions;
+    public List<Vector3Int> spawnedSpikesPositions;
     public Tilemap tilemap;
     [ContextMenu("SpawnAllSpikes")]
     void SpawnAllSpikes()
@@ -28,5 +29,10 @@ public class SpikeSpawner : MonoBehaviour
                 positions.Remove(position);
             }
         }
+    }
+
+    public void DeleteSpikes()
+    {
+
     }
 }

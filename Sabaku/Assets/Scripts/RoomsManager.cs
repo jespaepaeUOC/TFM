@@ -28,7 +28,7 @@ public class RoomsManager : MonoBehaviour
         }
     }
 
-    private GameObject getActiveRoom()
+    public GameObject getActiveRoom()
     {
         Debug.Log("RoomsManager - getActiveRoom");
         GameObject activeRoom = null;
