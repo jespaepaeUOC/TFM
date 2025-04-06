@@ -9,6 +9,19 @@ public class SpikeSpawner : MonoBehaviour
     public List<Vector3Int> posibleSpikesPositions;
     public List<Vector3Int> spawnedSpikesPositions;
     public Tilemap tilemap;
+
+    private int purpleDiceNumber;
+
+    void Start()
+    {
+        purpleDiceNumber = 0;
+    }
+
+    public void SetPurpleDiceNumber(int newPurpleDiceNumber)
+    {
+        purpleDiceNumber = newPurpleDiceNumber;
+    }
+
     [ContextMenu("SpawnAllSpikes")]
     void SpawnAllSpikes()
     {
@@ -34,6 +47,11 @@ public class SpikeSpawner : MonoBehaviour
     {
         for(int i = 0; i < number; i++)
         {
+            if(purpleDiceNumber > 0)
+            {
+                purpleDiceNumber--;
+                continue;
+            }
             if (posibleSpikesPositions.Count > 0) {
                 int randomSpike = Random.Range(0, posibleSpikesPositions.Count);
                 Vector3Int position = posibleSpikesPositions[randomSpike];
@@ -46,6 +64,10 @@ public class SpikeSpawner : MonoBehaviour
 
     public void DeleteSpikes(int number)
     {
+        if(number > spawnedSpikesPositions.Count) 
+        {
+            purpleDiceNumber = number - spawnedSpikesPositions.Count;
+        }
         for(int i = 0; i < number; i++)
         {
             if (spawnedSpikesPositions.Count > 0) {

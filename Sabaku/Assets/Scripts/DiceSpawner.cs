@@ -61,6 +61,7 @@ public class DiceSpawner : MonoBehaviour
 
     public void spawnDice() {
         if(diceQuantity.Count > 0 && !eventTrigger && CanSpawn()) {
+            BeforeEachDiceRoll();
             foreach (GameObject die in dice) {
                 int index = dice.IndexOf(die);
                 if (index < diceQuantity.Count)
@@ -76,6 +77,15 @@ public class DiceSpawner : MonoBehaviour
             }
             eventTrigger = true;
             StartCoroutine(CanSpawnAfterSeconds());
+        }
+    }
+
+    private void BeforeEachDiceRoll()
+    {
+        SpikeSpawner spikeSpawner = transform.parent.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
+        if (spikeSpawner != null)
+        {
+            spikeSpawner.SetPurpleDiceNumber(0);
         }
     }
 

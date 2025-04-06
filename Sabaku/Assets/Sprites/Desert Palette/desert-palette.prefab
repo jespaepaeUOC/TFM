@@ -347,6 +347,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 8, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 62
+      m_TileSpriteIndex: 60
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -1, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -833,6 +843,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 8d1743c2c1834604a9d638dd050aa093, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 7767eb10a2c821d4f8457047e48e2b9f, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 604d7f083d2c84e4abd48c2d8d2b271f, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -2071969808, guid: 2d9bf6b43e1a637428f9b26a5cfdf9f1, type: 3}
@@ -954,8 +966,10 @@ Tilemap:
     m_Data: {fileID: 511383284, guid: 7f7e2d135f9d3584291cfb3996fb3a0f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1135164008, guid: 7f7e2d135f9d3584291cfb3996fb3a0f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 2041378218, guid: 9d6294f4c0aaca440a3bdac2c3f0d998, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 62
+  - m_RefCount: 63
     m_Data:
       e00: 1
       e01: 0
@@ -974,7 +988,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 62
+  - m_RefCount: 63
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1049,7 +1063,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &5205327536028444138
+--- !u!114 &7025573908197317454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1061,6 +1075,6 @@ MonoBehaviour:
   m_Script: {fileID: 12395, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Palette Settings
   m_EditorClassIdentifier: 
-  cellSizing: 0
+  cellSizing: 100
   m_TransparencySortMode: 0
   m_TransparencySortAxis: {x: 0, y: 0, z: 1}
