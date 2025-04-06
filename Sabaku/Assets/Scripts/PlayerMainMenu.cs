@@ -13,7 +13,7 @@ public class PlayerMainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y-0.03f, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y-0.01f, 0);
         if(transform.position.y <= -35)
         {
             transform.position = new Vector3(transform.position.x, -15, 0);
