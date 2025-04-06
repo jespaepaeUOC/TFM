@@ -9,6 +9,7 @@ public class RoomManager : MonoBehaviour
     public GameObject diceSpawner;
     public GameObject spikeSpawner;
     public GameObject respawnPoint;
+    public GameObject items;
     private bool isFirstTimeEnteringRoom;
 
     void Start()
@@ -23,6 +24,7 @@ public class RoomManager : MonoBehaviour
             diceSpawner.SetActive(true);
             spikeSpawner.SetActive(true);
             respawnPoint.SetActive(true);
+            items.SetActive(true);
         }
     }
 
@@ -34,6 +36,7 @@ public class RoomManager : MonoBehaviour
             diceSpawner.SetActive(false);
             spikeSpawner.SetActive(false);
             respawnPoint.SetActive(false);
+            items.SetActive(false);
             SetIsFirstTimeEnteringRoom(false);
             this.transform.parent.GetComponent<RoomsManager>().spawnDice();
         }
@@ -41,7 +44,7 @@ public class RoomManager : MonoBehaviour
 
     public bool isRoomActive()
     {
-        return vCam.activeSelf && diceSpawner.activeSelf && spikeSpawner.activeSelf && respawnPoint.activeSelf;
+        return vCam.activeSelf && diceSpawner.activeSelf && spikeSpawner.activeSelf && respawnPoint.activeSelf && items.activeSelf;
     }
 
     public bool GetIsFirstTimeEnteringRoom()
