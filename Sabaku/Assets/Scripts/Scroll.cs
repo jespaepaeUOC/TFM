@@ -24,7 +24,17 @@ public class Scroll : MonoBehaviour
         if(collision.transform.CompareTag("Player"))
         {
             GameObject.Find("GameVariables").GetComponent<GameVariablesManager>().AddScroll();
+            PlayPauseButtonAnimation();
             Destroy(this.gameObject);
+        }
+    }
+
+    private void PlayPauseButtonAnimation()
+    {
+        GameObject pauseButton = GameObject.Find("PauseButton");
+        if(pauseButton != null)
+        {
+            pauseButton.GetComponent<Animator>().SetTrigger("ScrollTaken");
         }
     }
 }

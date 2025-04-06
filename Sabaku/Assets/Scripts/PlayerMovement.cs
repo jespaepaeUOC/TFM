@@ -190,6 +190,7 @@ public class PlayerMovement : MonoBehaviour
         if (activeRoom != null)
         {
             SetHasJustDied(true);
+            GameObject.Find("GameVariables").GetComponent<GameVariablesManager>().AddDeath();
             roomsManager.spawnDice();
             this.transform.position = activeRoom.transform.Find("RespawnPoint").position;
             activeRoom.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>().DeleteAllSpikes();

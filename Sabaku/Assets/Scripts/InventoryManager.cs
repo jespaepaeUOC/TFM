@@ -16,6 +16,7 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         UpdateNumberOfScrolls();
+        UpdateNumberOfDeaths();
     }
 
     void UpdateNumberOfScrolls()
@@ -26,5 +27,14 @@ public class InventoryManager : MonoBehaviour
             scrollInventory.transform.Find("NumberOf").GetComponentInChildren<TextMeshProUGUI>().text = gameVariables.GetScrolls().ToString();
         }
         
+    }
+
+    void UpdateNumberOfDeaths()
+    {
+        Transform deathsInventory = this.transform.Find("DeathsInventory");
+        if (deathsInventory != null)
+        {
+            deathsInventory.transform.Find("NumberOf").GetComponentInChildren<TextMeshProUGUI>().text = gameVariables.GetDeaths().ToString();
+        }
     }
 }
