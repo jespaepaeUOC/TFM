@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject controlsMenu;
+    public GameObject mainMenu;
     // Start is called before the first frame update
     public void LoadGameScene()
     {
@@ -39,5 +42,23 @@ public class ButtonManager : MonoBehaviour
     {
         UnpauseGame();
         SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void ShowControls()
+    {
+        transform.parent.gameObject.SetActive(false);
+        if(controlsMenu != null)
+        {
+            controlsMenu.SetActive(true);
+        }
+    }
+
+    public void HideControls()
+    {
+        transform.parent.gameObject.SetActive(false);
+        if(mainMenu != null)
+        {
+            mainMenu.SetActive(true);
+        }
     }
 }
