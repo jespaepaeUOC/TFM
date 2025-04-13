@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsTouchingSpikes())
         {
+            Debug.Log("Ouch");
             RespawnPlayer();
             //Destroy(this.gameObject);
             //SceneManager.LoadScene("GameScene");
@@ -91,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsTouchingSpikes()
     {
-        if (Physics2D.OverlapCircle(spikesCkeck[0].position, 0.2f, spikeLayer) || Physics2D.OverlapCircle(spikesCkeck[1].position, 0.2f, spikeLayer) ||
-                Physics2D.OverlapCircle(spikesCkeck[2].position, 0.2f, spikeLayer) || Physics2D.OverlapCircle(spikesCkeck[3].position, 0.2f, spikeLayer))
+        if (Physics2D.OverlapCircle(spikesCkeck[0].position, 0.05f, spikeLayer) || Physics2D.OverlapCircle(spikesCkeck[1].position, 0.05f, spikeLayer) ||
+                Physics2D.OverlapCircle(spikesCkeck[2].position, 0.05f, spikeLayer) || Physics2D.OverlapCircle(spikesCkeck[3].position, 0.05f, spikeLayer))
         {
             return true;
         } 
