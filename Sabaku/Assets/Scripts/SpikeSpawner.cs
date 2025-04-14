@@ -10,16 +10,16 @@ public class SpikeSpawner : MonoBehaviour
     public List<Vector3Int> spawnedSpikesPositions;
     public Tilemap tilemap;
 
-    private int purpleDiceNumber;
+    private int blueDiceNumber;
 
     void Start()
     {
-        purpleDiceNumber = 0;
+        blueDiceNumber = 0;
     }
 
-    public void SetPurpleDiceNumber(int newPurpleDiceNumber)
+    public void SetBlueDiceNumber(int newBlueDiceNumber)
     {
-        purpleDiceNumber = newPurpleDiceNumber;
+        blueDiceNumber = newBlueDiceNumber;
     }
 
     [ContextMenu("SpawnAllSpikes")]
@@ -47,9 +47,9 @@ public class SpikeSpawner : MonoBehaviour
     {
         for(int i = 0; i < number; i++)
         {
-            if(purpleDiceNumber > 0)
+            if(blueDiceNumber > 0)
             {
-                purpleDiceNumber--;
+                blueDiceNumber--;
                 continue;
             }
             if (posibleSpikesPositions.Count > 0) {
@@ -66,7 +66,7 @@ public class SpikeSpawner : MonoBehaviour
     {
         if(number > spawnedSpikesPositions.Count) 
         {
-            purpleDiceNumber = number - spawnedSpikesPositions.Count;
+            blueDiceNumber = number - spawnedSpikesPositions.Count;
         }
         for(int i = 0; i < number; i++)
         {

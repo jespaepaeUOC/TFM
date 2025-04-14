@@ -36,9 +36,8 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (IsTouchingSpikes())
+        if (IsTouchingSpikes() || TimerHasReachZero())
         {
-            Debug.Log("Ouch");
             RespawnPlayer();
             //Destroy(this.gameObject);
             //SceneManager.LoadScene("GameScene");
@@ -195,7 +194,19 @@ public class PlayerMovement : MonoBehaviour
             roomsManager.spawnDice();
             this.transform.position = activeRoom.transform.Find("RespawnPoint").position;
             activeRoom.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>().DeleteAllSpikes();
+            RestartTimer(activeRoom);
         }
+    }
+
+    private bool TimerHasReachZero()
+    {
+        bool timerHasReachZero = false;
+        GameObject timer = GameObject.Find("Timer");
+        if (timer != null && timer.GetComponent<TimerManager>().GetTimer() <= 0)
+        {
+            timerHasReachZero = true;
+        }
+        return timerHasReachZero;
     }
 
     public bool GetHasJustDied()
@@ -206,5 +217,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetHasJustDied(bool NewhasJustDied)
     {
         hasJustDied = NewhasJustDied;
+    }
+
+    private void RestartTimer(GameObject activeRoom)
+    {
+        activeRoom.GetComponent<RoomManager>().SetTimer();
     }
 }

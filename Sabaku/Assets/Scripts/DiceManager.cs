@@ -6,7 +6,7 @@ using UnityEngine;
 public class DiceManager : MonoBehaviour
 {
 
-    public enum typeOfDice{SpawnSpikes, DeleteSpikes, AddSecond, DeleteSeconds, SpawnEnemies, DeleteEnemies};
+    public enum typeOfDice{SpawnSpikes, DeleteSpikes, AddSeconds, DeleteSeconds, SpawnEnemies, DeleteEnemies};
     public typeOfDice type;
     private int diceFaceNum; 
     private bool hasntRun;
@@ -44,6 +44,7 @@ public class DiceManager : MonoBehaviour
     private void makeMagic()
     {
         SpikeSpawner spikeSpawner = GameObject.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
+        TimerManager timerManager = GameObject.Find("Timer").GetComponent<TimerManager>();
         switch(type)
         {
             case typeOfDice.SpawnSpikes:
@@ -52,6 +53,14 @@ public class DiceManager : MonoBehaviour
             
             case typeOfDice.DeleteSpikes:
                 spikeSpawner.DeleteSpikes(diceFaceNum);
+                break;
+
+            case typeOfDice.DeleteSeconds:
+                timerManager.DeleteSeconds(diceFaceNum);
+                break;
+
+            case typeOfDice.AddSeconds:
+                timerManager.AddSeconds(diceFaceNum);
                 break;
             
         }

@@ -85,7 +85,7 @@ public class DiceSpawner : MonoBehaviour
         SpikeSpawner spikeSpawner = transform.parent.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
         if (spikeSpawner != null)
         {
-            spikeSpawner.SetPurpleDiceNumber(0);
+            spikeSpawner.SetBlueDiceNumber(0);
         }
     }
 
@@ -111,6 +111,7 @@ public class DiceSpawner : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         if(player != null && !hasPaused)
         {
+            PauseTimer();
             player.GetComponent<Animator>().enabled = false;
             player.GetComponent<PlayerInput>().enabled = false;
             player.GetComponent<PlayerMovement>().enabled = false;
@@ -128,6 +129,7 @@ public class DiceSpawner : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         if(player != null && hasPaused)
         {
+            UnpauseTimer();
             player.GetComponent<Animator>().enabled = true;
             player.GetComponent<PlayerInput>().enabled = true;
             player.GetComponent<PlayerMovement>().enabled = true;
@@ -135,6 +137,24 @@ public class DiceSpawner : MonoBehaviour
             rb.gravityScale = originalGravity;
             rb.velocity = originalVelocity;
             hasPaused = false;
+        }
+    }
+
+    private void PauseTimer()
+    {
+        GameObject timer = GameObject.Find("Timer");
+        if (timer != null)
+        {
+            timer.GetComponent<TimerManager>().SetIsTimerPaused(true);
+        }
+    }
+
+    private void UnpauseTimer()
+    {
+        GameObject timer = GameObject.Find("Timer");
+        if (timer != null)
+        {
+            timer.GetComponent<TimerManager>().SetIsTimerPaused(false);
         }
     }
 
