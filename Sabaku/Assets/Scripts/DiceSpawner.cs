@@ -170,4 +170,25 @@ public class DiceSpawner : MonoBehaviour
         }
         return canSpawn;
     }
+
+    public void AddDieToRoom(DiceManager.typeOfDice typeOfDice)
+    {
+        if(diceQuantity.Count >= 6)
+        {
+            switch (typeOfDice)
+            {
+                case DiceManager.typeOfDice.AddSeconds:
+                    diceQuantity[3] = diceQuantity[3] + 1;
+                    break;
+
+                case DiceManager.typeOfDice.DeleteSpikes:
+                    diceQuantity[1] = diceQuantity[1] + 1;
+                    break;
+
+                case DiceManager.typeOfDice.DeleteEnemies:
+                    diceQuantity[5] = diceQuantity[5] + 1;
+                    break;
+            }
+        }
+    }
 }

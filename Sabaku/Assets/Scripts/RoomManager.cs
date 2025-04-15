@@ -12,6 +12,7 @@ public class RoomManager : MonoBehaviour
     public GameObject respawnPoint;
     public GameObject items;
     public float initialTimer;
+    public bool isShopRoom = false;
     private float defaultTimer = 15;
     private bool isFirstTimeEnteringRoom;
     
@@ -71,7 +72,12 @@ public class RoomManager : MonoBehaviour
         GameObject timer = GameObject.Find("Timer");
         if(timer != null)
         {
-            timer.GetComponent<TimerManager>().SetTimer(initialTimer);
+            timer.GetComponent<TimerManager>().SetTimer(initialTimer, isShopRoom);
         }
+    }
+
+    public bool GetIsShopRoom()
+    {
+        return isShopRoom;
     }
 }

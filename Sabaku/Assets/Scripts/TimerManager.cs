@@ -7,6 +7,7 @@ public class TimerManager : MonoBehaviour
 {
     private float timer;
     private bool isTimerPaused;
+    private bool isShopRoom;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class TimerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isTimerPaused && timer >= 0)
+        if(!isTimerPaused && !isShopRoom && timer >= 0)
         {
             timer -= Time.deltaTime;
         }
@@ -29,7 +30,14 @@ public class TimerManager : MonoBehaviour
         Transform timerText = transform.Find("TimerText");
         if (timerText != null)
         {
-            timerText.GetComponent<TextMeshProUGUI>().text = timer.ToString("f1");
+            if(isShopRoom)
+            {
+                timerText.GetComponent<TextMeshProUGUI>().text = "-";
+            } else 
+            {
+                timerText.GetComponent<TextMeshProUGUI>().text = timer.ToString("f1");
+            }
+            
         }
     }
 
@@ -38,9 +46,11 @@ public class TimerManager : MonoBehaviour
         return timer;
     }
 
-    public void SetTimer(float newTimer)
+    public void SetTimer(float newTimer, bool newIsShopRoom)
     {
         timer = newTimer;
+        isShopRoom = newIsShopRoom;
+
     }
 
     public bool GetIsTimerPaused()

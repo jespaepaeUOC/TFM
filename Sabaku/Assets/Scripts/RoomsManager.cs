@@ -44,5 +44,13 @@ public class RoomsManager : MonoBehaviour
         return activeRoom;
     }
 
+    public void AddDieToAllRooms(DiceManager.typeOfDice typeOfDice)
+    {
+        foreach(Transform room in transform)
+        {
+            room.Find("DiceSpawner").GetComponentInChildren<DiceSpawner>().AddDieToRoom(typeOfDice);;
+        }
+    }
+
 
 }

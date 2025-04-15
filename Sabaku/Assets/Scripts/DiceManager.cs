@@ -62,6 +62,12 @@ public class DiceManager : MonoBehaviour
             case typeOfDice.AddSeconds:
                 timerManager.AddSeconds(diceFaceNum);
                 break;
+
+            case typeOfDice.SpawnEnemies:
+                break;
+                
+            case typeOfDice.DeleteEnemies:
+                break;
             
         }
     }
