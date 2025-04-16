@@ -44,9 +44,9 @@ public class GameVariablesManager : MonoBehaviour
         this.scrolls++;
     }
 
-    public void SpendScroll()
+    public void SpendScrolls(int numberOfScrollsSpent)
     {
-        this.scrolls--;
+        this.scrolls -= numberOfScrollsSpent;
     }
 
     public void AddDeath()
