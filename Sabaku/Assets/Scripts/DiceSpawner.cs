@@ -165,7 +165,7 @@ public class DiceSpawner : MonoBehaviour
         PlayerMovement player = GameObject.Find("Player").GetComponent<PlayerMovement>();
         if (roomManager != null && player != null)
         {
-            canSpawn = roomManager.GetIsFirstTimeEnteringRoom() || player.GetHasJustDied();
+            canSpawn = (roomManager.GetIsFirstTimeEnteringRoom() || player.GetHasJustDied()) && !roomManager.GetIsShopRoom();
             player.SetHasJustDied(false);
         }
         return canSpawn;
