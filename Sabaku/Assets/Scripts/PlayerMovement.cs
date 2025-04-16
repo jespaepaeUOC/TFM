@@ -223,4 +223,16 @@ public class PlayerMovement : MonoBehaviour
     {
         activeRoom.GetComponent<RoomManager>().SetTimer();
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.CompareTag("Snail"))
+        {
+            RespawnPlayer();
+        } else if (collision.transform.CompareTag("PlayerDetector"))
+        {
+            collision.transform.parent.GetComponent<SnailManager>().Fall();
+            collision.transform.parent.GetComponent<Animator>().SetTrigger("Fall");
+        }
+    }
 }

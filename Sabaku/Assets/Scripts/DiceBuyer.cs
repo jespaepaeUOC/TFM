@@ -37,6 +37,9 @@ public class DiceBuyer : MonoBehaviour
                 {
                     Destroy(die.gameObject);
                 }
+            } else if(!HasEnoughScrolls())
+            {
+                textSpawner.GetComponent<TextSpawner>().ShowPopUpText("You don't have enough scrolls", 0.4f, 227f, 102f, 102f);
             }
         }
     }
