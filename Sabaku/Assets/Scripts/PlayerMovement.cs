@@ -38,9 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsTouchingSpikes() || TimerHasReachZero())
         {
+            Debug.Log("IsTouchingSpikes: " + IsTouchingSpikes() + " - TimerHasReachZero: " + TimerHasReachZero());
             RespawnPlayer();
-            //Destroy(this.gameObject);
-            //SceneManager.LoadScene("GameScene");
         }
 
         if (!isFacingRight && horizontal > 0f)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMainMenu : MonoBehaviour
 {
@@ -13,11 +14,22 @@ public class PlayerMainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y-0.01f, 0);
-        if(transform.position.y <= -35)
+        if (SceneManager.GetActiveScene().name == "MainMenuScene")
         {
-            transform.position = new Vector3(transform.position.x, -15, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y-0.01f, 0);
+            if(transform.position.y <= -35)
+            {
+                transform.position = new Vector3(transform.position.x, -15, 0);
+            }
+            this.GetComponent<Animator>().SetBool("isFalling", true);
         }
-        this.GetComponent<Animator>().SetBool("isFalling", true);
+        else 
+        {
+            this.GetComponent<Animator>().SetBool("isRunning", false);
+            this.GetComponent<Animator>().SetBool("isJumping", false);
+            this.GetComponent<Animator>().SetBool("isFalling", false);
+            this.GetComponent<Animator>().SetBool("isInverting", false);
+        }
+        
     }
 }

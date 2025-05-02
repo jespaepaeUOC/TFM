@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameVariables = GameObject.Find("GameVariables").GetComponent<GameVariablesManager>();
     }
 
     // Update is called once per frame

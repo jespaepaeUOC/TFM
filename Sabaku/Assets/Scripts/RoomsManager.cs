@@ -7,7 +7,9 @@ public class RoomsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameVariablesManager gameVariablesManager = GameObject.Find("GameVariables").GetComponent<GameVariablesManager>();
+        gameVariablesManager.SetDeaths(0);
+        gameVariablesManager.SetScrolls(0);
     }
 
     // Update is called once per frame
@@ -18,19 +20,19 @@ public class RoomsManager : MonoBehaviour
 
     public void spawnDice()
     {
-        Debug.Log("RoomsManager - spawnDice");
+        //Debug.Log("RoomsManager - spawnDice");
         GameObject activeRoom = getActiveRoom();
         
         if (activeRoom != null)
         {
-            Debug.Log("RoomsManager - spawnDice - beforeSpawnDice");
+            //Debug.Log("RoomsManager - spawnDice - beforeSpawnDice");
             activeRoom.transform.Find("DiceSpawner").GetComponent<DiceSpawner>().spawnDice();
         }
     }
 
     public GameObject getActiveRoom()
     {
-        Debug.Log("RoomsManager - getActiveRoom");
+        //Debug.Log("RoomsManager - getActiveRoom");
         GameObject activeRoom = null;
         foreach(Transform room in transform)
         {
@@ -40,7 +42,7 @@ public class RoomsManager : MonoBehaviour
                 break;
             }
         }
-        if (activeRoom != null) Debug.Log("RoomsManager - getActiveRoom - activeRoom: " + activeRoom.name);
+        //if (activeRoom != null) Debug.Log("RoomsManager - getActiveRoom - activeRoom: " + activeRoom.name);
         return activeRoom;
     }
 
