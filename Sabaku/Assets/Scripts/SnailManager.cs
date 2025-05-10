@@ -9,6 +9,7 @@ public class SnailManager : MonoBehaviour
     public float limit;
     private bool goLeft = true;
     private bool isFalling = false;
+    private bool hasFlipped = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,9 +73,20 @@ public class SnailManager : MonoBehaviour
 
     private void Flip()
     {
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
+        if(!hasFlipped)
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+            hasFlipped = true;
+            StartCoroutine(CanFlipAfterSeconds());
+        }
+        
+    }
+
+    private IEnumerator CanFlipAfterSeconds() {
+        yield return new WaitForSeconds(0.2f);
+        hasFlipped = false;
     }
 
     public void Fall()

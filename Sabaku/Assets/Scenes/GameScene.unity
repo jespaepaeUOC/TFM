@@ -91805,11 +91805,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4136008443782107540, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: diceQuantity.Array.data[0]
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4136008443782107540, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: diceQuantity.Array.data[1]
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4136008443782107540, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: diceQuantity.Array.data[2]
@@ -91817,15 +91817,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4136008443782107540, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: diceQuantity.Array.data[3]
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136008443782107540, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: diceQuantity.Array.data[4]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4136008443782107540, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: diceQuantity.Array.data[5]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4326744919184066115, guid: c4c729b46e10b0142820b58049bd726f, type: 3}
       propertyPath: m_LocalPosition.x
