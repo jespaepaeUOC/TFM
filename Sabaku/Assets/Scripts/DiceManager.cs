@@ -44,6 +44,7 @@ public class DiceManager : MonoBehaviour
     private void makeMagic()
     {
         SpikeSpawner spikeSpawner = GameObject.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
+        EnemySpawner enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         TimerManager timerManager = GameObject.Find("Timer").GetComponent<TimerManager>();
         switch(type)
         {
@@ -64,9 +65,11 @@ public class DiceManager : MonoBehaviour
                 break;
 
             case typeOfDice.SpawnEnemies:
+                enemySpawner.SpawnEnemies(diceFaceNum);
                 break;
                 
             case typeOfDice.DeleteEnemies:
+                enemySpawner.DeleteEnemies(diceFaceNum);
                 break;
             
         }

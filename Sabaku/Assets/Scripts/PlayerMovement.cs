@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsTouchingSpikes() || TimerHasReachZero())
         {
-            Debug.Log("IsTouchingSpikes: " + IsTouchingSpikes() + " - TimerHasReachZero: " + TimerHasReachZero());
+            //Debug.Log("IsTouchingSpikes: " + IsTouchingSpikes() + " - TimerHasReachZero: " + TimerHasReachZero());
             RespawnPlayer();
         }
 
@@ -193,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
             roomsManager.spawnDice();
             this.transform.position = activeRoom.transform.Find("RespawnPoint").position;
             activeRoom.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>().DeleteAllSpikes();
+            activeRoom.transform.Find("EnemySpawner").GetComponent<EnemySpawner>().DeleteAllEnemies();
             RestartTimer(activeRoom);
         }
     }

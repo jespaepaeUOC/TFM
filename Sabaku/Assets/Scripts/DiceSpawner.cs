@@ -83,9 +83,14 @@ public class DiceSpawner : MonoBehaviour
     private void BeforeEachDiceRoll()
     {
         SpikeSpawner spikeSpawner = transform.parent.transform.Find("SpikeSpawner").GetComponent<SpikeSpawner>();
+        EnemySpawner enemySpawner = transform.parent.transform.Find("EnemySpawner").GetComponent<EnemySpawner>();
         if (spikeSpawner != null)
         {
             spikeSpawner.SetBlueDiceNumber(0);
+        }
+        if (enemySpawner != null)
+        {
+            enemySpawner.SetGreenDiceNumber(0);
         }
     }
 

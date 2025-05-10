@@ -176,6 +176,50 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2298240505213355299}
   m_Damping: 0.5
   m_MaxWindowSize: -1
+--- !u!1 &2416300243811520911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4422935623943142173}
+  - component: {fileID: 5887386792023024995}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4422935623943142173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416300243811520911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5022810621513943151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5887386792023024995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416300243811520911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf040e5bf32f7044af3148a26ac48a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3795364687848489470
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +256,7 @@ Transform:
   - {fileID: 7074666600636730782}
   - {fileID: 5949397990621424074}
   - {fileID: 1827557168425211031}
+  - {fileID: 4422935623943142173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2298240505213355299
@@ -279,8 +324,10 @@ MonoBehaviour:
   diceSpawner: {fileID: 8977129520587535745}
   spikeSpawner: {fileID: 7514583124975333285}
   respawnPoint: {fileID: 5823753241675312654}
+  enemySpawner: {fileID: 2416300243811520911}
   items: {fileID: 4899906124491609735}
   initialTimer: 15
+  isShopRoom: 0
 --- !u!1 &4899906124491609735
 GameObject:
   m_ObjectHideFlags: 0

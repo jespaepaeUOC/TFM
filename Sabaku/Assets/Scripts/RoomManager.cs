@@ -10,6 +10,7 @@ public class RoomManager : MonoBehaviour
     public GameObject diceSpawner;
     public GameObject spikeSpawner;
     public GameObject respawnPoint;
+    public GameObject enemySpawner;
     public GameObject items;
     public float initialTimer;
     public bool isShopRoom = false;
@@ -33,6 +34,7 @@ public class RoomManager : MonoBehaviour
             diceSpawner.SetActive(true);
             spikeSpawner.SetActive(true);
             respawnPoint.SetActive(true);
+            enemySpawner.SetActive(true);
             items.SetActive(true);
             SetTimer();
         }
@@ -46,6 +48,7 @@ public class RoomManager : MonoBehaviour
             diceSpawner.SetActive(false);
             spikeSpawner.SetActive(false);
             respawnPoint.SetActive(false);
+            enemySpawner.SetActive(false);
             items.SetActive(false);
             SetIsFirstTimeEnteringRoom(false);
             this.transform.parent.GetComponent<RoomsManager>().spawnDice();
